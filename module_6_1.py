@@ -22,15 +22,11 @@ class Plant:
 class Mammal(Animal):
     def __init__(self, name):
         super().__init__(name)
-    
-
 
 
 class Predator(Animal):
     def __init__(self,name):
         super().__init__(name)
-
-
 
 
 class Flower(Plant):
