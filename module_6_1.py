@@ -1,22 +1,20 @@
 class Animal:
+    alive = True
+    fed = False
     def __init__(self, name):
-        self.alive = True
-        self.fed = False
         self.name = name
 
 
 class Plant:
+    edible = False
     def __init__(self, name):
-        self.edible = False
         self.name = name
 
 
 class Mammal(Animal):
-    def __init__(self, name):
-        super().__init__(name)
 
     def eat(self, food):
-        if isinstance(food, Fruit):
+        if food.edible:
             self.fed = True
             print(f"{self.name} съел {food.name}")
         else:
@@ -25,11 +23,9 @@ class Mammal(Animal):
 
 
 class Predator(Animal):
-    def __init__(self, name):
-        super().__init__(name)
 
     def eat(self, food):
-        if isinstance(food, Fruit):
+        if food.edible:
             self.fed = True
             print(f"{self.name} съел {food.name}")
         else:
